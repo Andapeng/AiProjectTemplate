@@ -1,0 +1,30 @@
+---
+description: Use progressive retrieval and context budget control
+alwaysApply: true
+---
+
+# Context Budget and Progressive Retrieval
+
+随着工程变大，禁止一次性加载大量文件。采用“预算 + 二跳检索”。
+
+默认策略：
+
+1. 先读索引与总览：`README.md`、`memory/index.md`、相关 `docs/*/overview.md`。
+2. 首轮仅加载最小必要上下文（建议 3-6 个文件）。
+3. 发现缺口后再二跳读取具体条目（ADR、spec、entries、契约文件）。
+4. 每轮结束形成简短“工作记忆摘要”（目标、约束、未决问题）。
+
+优先级：
+
+- CoreContext > TaskContext > MemoryContext > External
+
+压缩要求：
+
+- 先提取结论再展开细节，避免整文件搬运。
+- 长文档优先读取目录、摘要、决策与约束段落。
+
+触发归档信号：
+
+- 当单文档过长且高频被读取时，建议拆分为“overview + 子专题”。
+- 当 timeline 或 todo 过长时，建议归档历史到 `archive/` 并保留索引入口。
+- 归档时遵循 `docs/03-context-engineering/archive-strategy.md`，检索先走主路径索引再定向读归档。

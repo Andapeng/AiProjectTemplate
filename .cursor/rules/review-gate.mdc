@@ -1,0 +1,36 @@
+---
+description: Enforce review and release gate checks for changes
+alwaysApply: true
+---
+
+# Review and Release Gate
+
+任何设计/实现变更在交付前，必须经过最小审查门禁。
+
+## 变更前检查（Pre-Change）
+
+1. 是否有对应任务与规格（`docs/08-todo/`、`specs/`）。
+2. 是否影响接口契约（`docs/02-interfaces/`、`specs/contracts/`）。
+3. 是否涉及架构决策冲突（`docs/01-architecture/decision-records/`）。
+4. 是否触及安全分级（`docs/10-governance/security-privacy.md`）。
+
+## 变更后检查（Post-Change）
+
+1. 对照 `docs/06-quality-and-testing/overview.md` 执行最小测试/评测门禁。
+2. 若契约变化，确认版本策略与兼容说明已记录。
+3. 若为架构级变更，新增 ADR 或补充 RFC 决议。
+4. 确认记忆写回（`memory/index.md` 及必要条目）。
+
+## 输出格式要求
+
+- 交付说明中必须包含：
+  - 影响范围（模块/接口/数据）
+  - 风险等级（高/中/低）
+  - 回滚思路（若适用）
+  - 门禁执行结果（通过/阻塞 + 原因）
+
+## 阻断条件（Blockers）
+
+- 缺失规格且无法验证验收标准
+- 存在高风险安全/合规疑点未处理
+- 核心契约破坏且无版本与迁移说明

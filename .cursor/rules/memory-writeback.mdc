@@ -1,0 +1,25 @@
+---
+description: Enforce memory write-back after task completion
+alwaysApply: true
+---
+
+# Memory Write-Back Discipline
+
+任务完成后，必须执行最小记忆写回，避免知识只停留在对话里。
+
+最小写回清单：
+
+1. 更新 `memory/index.md`（新增或调整索引条目）。
+2. 若有可复用结论，更新 `memory/entries/`（术语、经验、反模式）。
+3. 重大节点更新 `memory/timeline.md`（日期 + 事件 + 影响）。
+4. 架构级决策新增 ADR（`docs/01-architecture/decision-records/`）。
+
+输出要求：
+
+- 回答中明确说明“本次已更新哪些记忆文件”。
+- 如果未写回，必须给出阻塞原因与后续补写步骤。
+
+禁止：
+
+- 仅在聊天中口头总结、不落库。
+- 将敏感信息写入 `memory/`（遵守 `docs/10-governance/security-privacy.md`）。

@@ -1,0 +1,15 @@
+# 长时任务检查点可能含环境相关信息，默认不提交
+/checkpoints/*/
+!/checkpoints/README.md
+
+# 评测报告输出（若本地生成）
+/tests/evals/reports/
+
+# OS / 编辑器
+.DS_Store
+Thumbs.db
+*.swp
+
+# 可选：密钥与本地环境（按项目取消注释）
+# .env
+# *.pem

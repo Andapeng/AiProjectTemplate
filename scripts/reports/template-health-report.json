@@ -1,0 +1,96 @@
+﻿{
+    "generatedAt":  "2026-03-27T14:52:00",
+    "repoRoot":  "D:\\Workspace\\AiProject\\AiProjectTemplate",
+    "summary":  {
+                    "status":  "PASS",
+                    "pass":  14,
+                    "total":  14,
+                    "warn":  0
+                },
+    "checks":  [
+                   {
+                       "category":  "paths",
+                       "check":  "requirements directory exists",
+                       "status":  "PASS",
+                       "message":  "specs/requirements"
+                   },
+                   {
+                       "category":  "paths",
+                       "check":  "design directory exists",
+                       "status":  "PASS",
+                       "message":  "specs/design"
+                   },
+                   {
+                       "category":  "paths",
+                       "check":  "acceptance directory exists",
+                       "status":  "PASS",
+                       "message":  "specs/acceptance"
+                   },
+                   {
+                       "category":  "paths",
+                       "check":  "memory index exists",
+                       "status":  "PASS",
+                       "message":  "memory/index.md"
+                   },
+                   {
+                       "category":  "paths",
+                       "check":  "memory timeline exists",
+                       "status":  "PASS",
+                       "message":  "memory/timeline.md"
+                   },
+                   {
+                       "category":  "paths",
+                       "check":  "memory entries directory exists",
+                       "status":  "PASS",
+                       "message":  "memory/entries"
+                   },
+                   {
+                       "category":  "paths",
+                       "check":  "ADR directory exists",
+                       "status":  "PASS",
+                       "message":  "docs/01-architecture/decision-records"
+                   },
+                   {
+                       "category":  "paths",
+                       "check":  "contracts directory exists",
+                       "status":  "PASS",
+                       "message":  "specs/contracts"
+                   },
+                   {
+                       "category":  "paths",
+                       "check":  "interfaces overview exists",
+                       "status":  "PASS",
+                       "message":  "docs/02-interfaces/overview.md"
+                   },
+                   {
+                       "category":  "paths",
+                       "check":  "health-check doc exists",
+                       "status":  "PASS",
+                       "message":  "docs/09-operations/template-health-check.md"
+                   },
+                   {
+                       "category":  "id-link",
+                       "check":  "REQ linkage is consistent",
+                       "status":  "PASS",
+                       "message":  "REQ-001 should appear in REQ/DES/ACC"
+                   },
+                   {
+                       "category":  "id-link",
+                       "check":  "ACC links to DES-001",
+                       "status":  "PASS",
+                       "message":  "Acceptance should reference DES-001"
+                   },
+                   {
+                       "category":  "id-link",
+                       "check":  "DES links to ACC-001",
+                       "status":  "PASS",
+                       "message":  "Design should reference ACC-001"
+                   },
+                   {
+                       "category":  "eval",
+                       "check":  "critical eval sample exists",
+                       "status":  "PASS",
+                       "message":  "tests/evals/critical/eval-0001-minimal-flow.yaml"
+                   }
+               ]
+}

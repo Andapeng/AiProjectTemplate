@@ -1,0 +1,14 @@
+id: eval-0001-minimal-flow
+tags:
+  - critical
+  - onboarding
+task: "验证模板最小链路是否齐全：REQ-001 -> DES-001 -> ACC-001 -> critical eval"
+reference: "应确认三类 specs 与 critical eval 文件都存在且可定位。"
+rubric:
+  must_have:
+    - "REQ-001-minimal-template-flow.md"
+    - "DES-001-minimal-template-flow.md"
+    - "ACC-001-minimal-template-flow.md"
+    - "eval-0001-minimal-flow.yaml"
+  must_not:
+    - "仅返回笼统结论而不指向文件"

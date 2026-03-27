@@ -1,0 +1,21 @@
+---
+description: Enforce spec-first workflow before implementation
+alwaysApply: true
+---
+
+# Spec First Workflow
+
+在开始实现前，优先确认规格与契约，不允许直接“边写边猜”。
+
+执行顺序：
+
+1. 检查是否存在对应任务单（`docs/08-todo/` 或 issue 映射）。
+2. 检查是否存在对应规格（`specs/requirements/`、`specs/design/`、`specs/acceptance/`）。
+3. 涉及接口时，检查 `docs/02-interfaces/overview.md` 与 `specs/contracts/`。
+4. 涉及架构权衡时，检查 `docs/01-architecture/decision-records/` 中 ADR。
+
+约束：
+
+- 若规格缺失，先产出“最小可执行规格草稿”，再进入实现。
+- 若请求与现有契约冲突，先说明冲突与影响范围，再提出兼容方案。
+- 破坏性变更必须提示需要版本变更与 ADR（或 RFC）记录。

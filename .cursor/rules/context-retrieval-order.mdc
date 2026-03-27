@@ -1,0 +1,21 @@
+---
+description: Enforce context retrieval order for AI tasks
+alwaysApply: true
+---
+
+# Context Retrieval Order
+
+在开始设计、编码、评审前，始终按以下顺序读取上下文：
+
+1. `docs/00-project-charter.md`（目标、边界、成功指标）
+2. `docs/01-architecture/overview.md` + `docs/01-architecture/decision-records/`（架构原则与历史决策）
+3. `docs/02-interfaces/overview.md` + 对应 `specs/contracts/`（接口契约）
+4. 当前任务对应 `specs/` 与 `docs/08-todo/` 任务单（TaskContext）
+5. `memory/index.md` 后再读相关 `memory/entries/` 与 `memory/timeline.md`（MemoryContext）
+6. 仅在以上不足时，使用外部资料
+
+执行要求：
+
+- 先引用仓库内路径，再给方案或改动建议。
+- 若发现请求与 ADR/安全治理冲突，先指出冲突再继续。
+- 任务结束时提醒更新 `memory/index.md`（必要时新增条目或 ADR）。

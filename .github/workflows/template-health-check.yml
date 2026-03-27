@@ -1,0 +1,29 @@
+name: Template Health Check
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  template-health-check:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run template health check
+        shell: pwsh
+        run: |
+          powershell -ExecutionPolicy Bypass -File "scripts/template-health-check.ps1"
+
+      - name: Upload health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: template-health-report
+          path: scripts/reports/template-health-report.json
+          if-no-files-found: warn
