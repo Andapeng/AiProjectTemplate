@@ -15,6 +15,7 @@
 | 模板使用、入门 | 本仓库目的与目录 | [`../README.md`](../README.md) |
 | 上下文、检索顺序 | Core / Task / Memory | [`../docs/03-context-engineering/overview.md`](../docs/03-context-engineering/overview.md) |
 | 多智能体、交接 | Handoff 协议 | [`../docs/04-agent-orchestration/overview.md`](../docs/04-agent-orchestration/overview.md) |
+| Cursor Subagent | 委派定义（`.cursor/agents/`） | [`../.cursor/agents/README.md`](../.cursor/agents/README.md) |
 | 长任务、checkpoint | 状态机与恢复 | [`../docs/05-long-running-agents/overview.md`](../docs/05-long-running-agents/overview.md) |
 | 测试、评测、门禁 | 质量双轨 | [`../docs/06-quality-and-testing/overview.md`](../docs/06-quality-and-testing/overview.md) |
 | 路线图 | Now/Next/Later | [`../docs/07-roadmap/roadmap.md`](../docs/07-roadmap/roadmap.md) |

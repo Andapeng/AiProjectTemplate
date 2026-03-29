@@ -62,6 +62,8 @@
 
 本模板已提供全局规则，位置：`.cursor/rules/`
 
+**Cursor Subagents**：角色委派定义在 [`.cursor/agents/`](.cursor/agents/README.md)，与 [`agents/`](agents/README.md) 契约对应；可用 `/planner`、`/reviewer` 等显式调用（以各文件 `name` 为准）。
+
 - `context-retrieval-order.mdc`：固定文档检索顺序
 - `spec-first.mdc`：先规格后实现
 - `context-budget.mdc`：渐进检索与上下文预算

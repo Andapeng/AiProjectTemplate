@@ -2,6 +2,8 @@
 
 本目录定义 **默认多智能体角色** 的输入/输出契约与权限边界。运行时实现可替换，文档为 **Source of Truth**。
 
+在 **Cursor** 中可将各角色落地为 Subagent：见 [`.cursor/agents/`](../.cursor/agents/README.md)（精简委派提示；本目录仍为完整契约）。
+
 | 文件 | 角色 |
 |------|------|
 | [planner.md](planner.md) | Planner — 分解与上下文裁剪 |
